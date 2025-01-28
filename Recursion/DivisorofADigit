@@ -1,0 +1,17 @@
+class Main {
+    static void divisor(int n,int m){
+       if(n<m){
+           return;
+       }
+       if(n%m==0){
+           System.out.print(m + " ");
+       }
+       divisor(n,m+1);
+       
+        
+    }
+    public static void main(String[] args) {
+        int n = 6;
+    divisor(n,1);
+    }
+}
