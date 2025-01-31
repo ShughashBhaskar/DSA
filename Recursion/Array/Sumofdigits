@@ -1,0 +1,15 @@
+class Main {
+    static int sum(int a[],int n,int i){
+        if(i>=n){
+            return 0;
+        }else{
+            return a[i]+sum(a,n,i+1);
+        }
+    }
+    public static void main(String[] args) {
+      int[] a = {1,2,3,4,9};
+      int n =a.length;
+      System.out.print(sum(a,n,0));
+      
+    }
+}
