@@ -1,0 +1,19 @@
+class Main {
+    static boolean checksorted(int a[],int n,int i){
+        if(i>=n-1){
+        return true;
+       }
+            if(a[i]>a[i+1]){
+               
+                return false;
+            }
+             return checksorted(a,n,i+1);
+    }
+    public static void main(String[] args) {
+      int[] a = {1,9,2,3,4,9};
+      int n =a.length;
+     System.out.println(checksorted(a,n,0));
+     
+      
+    }
+}
