@@ -1,0 +1,68 @@
+class Main {
+    public static void main(String[] args) {
+        int val=4;
+        Stack s = new Stack(7);
+        for(int i=0;i<7;i++){
+            val=val*2;
+            s.push(val);
+        }
+        s.display();
+       System.out.println("pop:"+s.pop()) ;
+       s.display();
+        System.out.println("pop:"+s.pop()) ;
+        s.pop();
+        s.display();
+        s.pop();
+    }
+}
+class Stack{
+    int[] arr;
+    int top;
+    int size;
+    
+    public Stack(int size){
+     arr=new int[size];
+     top=-1;
+     this.size=size;
+    }
+
+public void push(int data){
+    if(size>top+1){
+        top++;
+        arr[top]=data;
+        
+    }else{
+        System.out.println("Stack overflow");
+    }
+}
+public int pop(){
+    if(top==-1){
+        System.out.println("Stack underflow");
+    }else{
+        int value=arr[top];
+        top--;
+        return value;
+    }
+    return 0;
+}
+public int peek(){
+    if(top==-1){
+        System.out.println("Stack is empty");
+    }else{
+        int value=arr[top];
+        
+        return value;
+    }
+    return 0;
+}
+public void display(){
+    if(top==-1){
+        System.out.println("Stack is empty");
+    }else{
+        for(int i=0;i<=top;i++){
+            System.out.print(arr[i]+" ");
+        }
+    }
+}
+
+}
